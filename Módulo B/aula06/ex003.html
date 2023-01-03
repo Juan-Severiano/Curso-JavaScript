@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa com JavaScript</title>
+    <style>
+        body{
+            background-color: rgb(243, 243, 10);
+            color: white;
+            font-size: 20pt;
+        }
+        *{
+            font-family: sans-serif;
+        }
+        h1{
+            color: #252525;
+        }
+        p{
+            color: rgb(169, 169, 169);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Hello word</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é ${s}`)
+        // por padrão o window.prompt() retorna uma string
+        // para que haja uma soma, ou qualquer tipo de operação eu tenho que ter números Inteiros ou Reais
+        // e para transformar um valor em Int ou Float, tenho que usar os comandos
+        // Number.parseInt(n) para converter a variável em Inteiro
+        // Number.parseFloat(n) para converter a variável para Float
+    </script>
+</body>
+
+</html>
