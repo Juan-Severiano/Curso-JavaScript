@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Multas</title>
+    <style>
+        *{
+            font: normal 16pt Arial;
+        }
+        body{
+            background-color: rgb(253, 221, 178);
+        }
+        p{
+            font: normal 14pt Arial;
+        }
+        .main{
+            margin: auto;
+            width: 300px;
+            height: 500px;
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .main h1{
+            text-align: center;
+        }
+        .input-area{
+            margin-top: 70px;
+        }
+        .input-area input#vel {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Sistema de Multas</h1>
+        <div class="input-area">
+            <label for="vel"><p>Velocidade do Veiculo: 
+                <input type="number" name="vel" id="vel"><strong> Km/h</strong> </p>
+            </label>
+            <input type="button" value="Calcular" onclick="calcular()">
+            <p id="res">ss</p>
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+            var tvel = document.querySelector('#vel')
+            var res = document.querySelector('#res')
+            var vel = Number(tvel.value)
+            if ( vel > 60 ) {
+                res.innerHTML = 'A sua velocidade foi maior que 60km/h <br>Você foi <strong>MULTADO</strong>'
+            }
+        }
+    </script>
+</body>
+</html>
